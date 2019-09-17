@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class Itinerary extends Component {
+export default class ViewTripPage extends Component {
     render() {
         return (
             <div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class Event extends Component {
+export default class Trip extends Component {
     render() {
         return (
             <div>
