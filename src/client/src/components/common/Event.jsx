@@ -1,5 +1,8 @@
 import React, { Component } from "react";
-import TextField from "@material-ui/core/TextField";
+import "../../styles/Event.scss";
+import { Button, TextField } from "@material-ui/core/";
+import Collapsible from "react-collapsible";
+import { withGoogleMap, GoogleMap, SearchBox } from "react-google-maps";
 export default class Event extends Component {
   constructor(props) {
     super(props);
@@ -19,60 +22,56 @@ export default class Event extends Component {
     console.log(event);
   }
   render() {
+    const textProps = {
+      variant: "outlined",
+      InputLabelProps: { shrink: true }
+    };
     return (
       <div className="event-main">
-        <form onSubmit={this.handleSubmit}>
-          <TextField
-            id="event-name"
-            label="Name"
-            type="text"
-            variant="outlined"
-            className="EventName"
-            InputLabelProps={{
-              shrink: true
-            }}
-          />
-          <TextField
-            id="event-start-date"
-            label="Start Date"
-            type="date"
-            variant="outlined"
-            className="EventStartDate"
-            InputLabelProps={{
-              shrink: true
-            }}
-          />
-          <TextField
-            id="event-start-time"
-            label="Start Time"
-            type="time"
-            variant="outlined"
-            className="EventStartTime"
-            InputLabelProps={{
-              shrink: true
-            }}
-          />
-          <TextField
-            id="event-end-date"
-            label="End Date"
-            type="date"
-            variant="outlined"
-            className="EventEndDate"
-            InputLabelProps={{
-              shrink: true
-            }}
-          />
-          <TextField
-            id="event-end-time"
-            label="End Time"
-            type="time"
-            variant="outlined"
-            className="EventEndTime"
-            InputLabelProps={{
-              shrink: true
-            }}
-          />
-        </form>
+        <TextField
+          required
+          id="event-name"
+          label="Name"
+          type="text"
+          className="event-textfield"
+          {...textProps}
+        />
+        <TextField
+          required
+          id="event-start-date"
+          label="Start Date"
+          type="date"
+          className="event-textfield"
+          {...textProps}
+        />
+        <TextField
+          required
+          id="event-start-time"
+          label="Start Time"
+          type="time"
+          className="event-textfield"
+          {...textProps}
+        />
+        <TextField
+          required
+          id="event-end-date"
+          label="End Date"
+          type="date"
+          className="event-textfield"
+          {...textProps}
+        />
+        <TextField
+          required
+          id="event-end-time"
+          label="End Time"
+          type="time"
+          className="event-textfield"
+          {...textProps}
+        />
+        <Button variant="contained" className="event-button">Submit</Button>
+        <Collapsible trigger="test">
+          <p>This collapsible works</p>
+        </Collapsible>
       </div>
     );
   }

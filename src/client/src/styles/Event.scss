@@ -1,0 +1,24 @@
+$gradient-color: linear-gradient( 90.6deg, rgba(59,158,255,1) -1.2%, rgba(246,135,255,1) 91.6% );
+.event-textfield {
+    .MuiOutlinedInput-root {
+        & label.Mui-focused {
+            color: rgba(61,106,239,1);
+        }
+        &.Mui-focused fieldset {
+            border-color: rgba(61,106,239,1);
+
+        }
+        fieldset {
+            border-color: rgba(59,158,255,1);
+
+        }
+        &:hover fieldset{
+            border-color: rgba(246,135,255,1);
+        }
+
+    }
+}
+
+.event-button {
+    background: $gradient-color;
+}
