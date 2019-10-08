@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "../../styles/Event.scss";
 import { Button, TextField } from "@material-ui/core/";
 import Collapsible from "react-collapsible";
-import { withGoogleMap, GoogleMap, SearchBox } from "react-google-maps";
 export default class Event extends Component {
   constructor(props) {
     super(props);
