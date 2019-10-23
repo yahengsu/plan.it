@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "../../styles/Event.scss";
 import { Button, TextField } from "@material-ui/core/";
-import Collapsible from "react-collapsible";
 export default class Event extends Component {
   constructor(props) {
     super(props);
@@ -75,9 +74,6 @@ export default class Event extends Component {
           {...textProps}
           />
         <Button variant="contained" className="event-button">Submit</Button>
-        <Collapsible trigger="test">
-          <p>This collapsible works</p>
-        </Collapsible>
       </div>
     );
   }
