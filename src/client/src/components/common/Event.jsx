@@ -67,6 +67,13 @@ export default class Event extends Component {
           className="event-textfield"
           {...textProps}
         />
+        <TextField
+          id="location"
+          label="Location"
+          type="text"
+          className="location-textfield"
+          {...textProps}
+          />
         <Button variant="contained" className="event-button">Submit</Button>
         <Collapsible trigger="test">
           <p>This collapsible works</p>
